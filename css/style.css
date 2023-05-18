@@ -101,15 +101,6 @@ h1{
     transform: translateY(-50%);
 }
 
-.form form input{
-    width: 100%;
-    background-color: #132634;
-    border: none;
-    padding: .875rem;
-    padding-left: 2.625rem;
-    color: var(--gray);
-}
-
 .form > .link1{
     margin-top: 2rem;
     text-align: center;
@@ -139,7 +130,7 @@ h1{
     filter: invert(100%);
 }
 
-.form input::placeholder, .form p{
+.form p{
     color: var(--gray);
     font-size: 1rem;
 }
@@ -159,5 +150,9 @@ h1{
 
 .error i.fa-circle-exclamation{
     color: var(--acqua-green);
+    visibility: visible;
+}
+
+.error small{
     visibility: visible;
 }

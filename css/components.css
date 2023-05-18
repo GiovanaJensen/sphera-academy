@@ -48,10 +48,25 @@
     border: 1px solid var(--acqua-green);
 }
 
-small {
-    display: none;
+small{
+    visibility: hidden;
 }
 
-.error-message {
-    color: red;
+.input--base{
+    width: 100%;
+    background-color: #132634;
+    border: none;
+    border-radius: .25rem;
+    padding: .875rem;
+    padding-left: 2.625rem;
+    color: var(--gray);
+}
+
+.input--base::placeholder{
+    color: var(--gray);
+    font-size: 1rem;
+}
+
+.input--base:focus{
+    outline: 1px solid var(--dark-acqua-green);
 }

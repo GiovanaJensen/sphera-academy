@@ -17,32 +17,26 @@
             <p>Preencha seus dados ou crie uma conta</p>
             <hr>
             <form>
-                <div class="form-control success">
+                <div class="form-control">
                     <label for="email-user">E-mail ou nome de usuário<span>*</span></label>
                     <div class="input-with-icon">
                         <img src="imgs/mail.svg" alt="ícone de email">
-                        <input type="text" id="email-user" name="email-user" placeholder="exemplo@gmail.com">
+                        <input class="input--base" type="text" id="email-user" name="email-user" placeholder="exemplo@gmail.com">
                         <i class="fa-solid fa-check"></i>
                         <i class="fa-solid fa-circle-exclamation"></i>
                     </div>
-                    
-                    <small>mensagem de erro</small>
                 </div>
-                <div class="form-control error">
-                    <label for="email-user">Senha de acesso<span>*</span></label>
+                <div class="form-control">
+                    <label for="password">Senha de acesso<span>*</span></label>
                     <div class="input-with-icon">
                         <img src="imgs/lock.svg" alt="ícone de cadeado">
-                        <input type="password" id="password" name="password" placeholder="Digite a sua senha">
+                        <input class="input--base" type="password" id="password" name="password" placeholder="Digite a sua senha">
                         <i class="fa-solid fa-check"></i>
                         <i class="fa-solid fa-circle-exclamation"></i>
                     </div>
-                    
-                    <small>mensagem de erro</small>
-                    <a href="esqueceu-senha.html" class="link--primary">Esqueceu sua senha?</a>
                 </div>
-                <div>
-                    <button class="btn--base btn--dark-acqua-green" type="submit">Acessar conta</button>
-                </div>
+                <a href="esqueceu-senha.html" class="link--primary">Esqueceu sua senha?</a>
+                <button class="btn--base btn--dark-acqua-green" type="submit">Acessar conta</button>
             </form>
             <a href="#" style="text-align: center; margin-block: 10px;" class="link--primary">Ainda não possui uma conta?</a>
             <button class="btn--base btn--gray">Criar uma conta</button>
@@ -52,6 +46,6 @@
             </div>
         </div>
     </main>
-   
+   <script src="js/form.js"></script>
 </body>
 </html>
