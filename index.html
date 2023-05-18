@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Login</title>
 </head>
 <body>
@@ -16,20 +17,26 @@
             <p>Preencha seus dados ou crie uma conta</p>
             <hr>
             <form>
-                <div class="form-control">
+                <div class="form-control success">
                     <label for="email-user">E-mail ou nome de usuário<span>*</span></label>
                     <div class="input-with-icon">
                         <img src="imgs/mail.svg" alt="ícone de email">
                         <input type="text" id="email-user" name="email-user" placeholder="exemplo@gmail.com">
+                        <i class="fa-solid fa-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
                     </div>
+                    
                     <small>mensagem de erro</small>
                 </div>
-                <div class="form-control">
+                <div class="form-control error">
                     <label for="email-user">Senha de acesso<span>*</span></label>
                     <div class="input-with-icon">
                         <img src="imgs/lock.svg" alt="ícone de cadeado">
                         <input type="password" id="password" name="password" placeholder="Digite a sua senha">
+                        <i class="fa-solid fa-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
                     </div>
+                    
                     <small>mensagem de erro</small>
                     <a href="esqueceu-senha.html" class="link--primary">Esqueceu sua senha?</a>
                 </div>
