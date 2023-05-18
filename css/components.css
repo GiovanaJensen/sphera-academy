@@ -3,7 +3,7 @@
     --gray: #5E717F;
     --white1: #F2F2FA;
     --aqua-green: #7EDDD3;
-    --dark-aqua-green: #239DA5;
+    --dark-aqua-green: #05868E;
     --dark-blue: #071A28;
 }
 
@@ -27,11 +27,25 @@
     border-radius: .25rem;
     color: var(--white);
     font-size: 1rem; 
+    cursor: pointer;
 }
 
-.btn--acqua-green{
+.btn--dark-acqua-green{
     background-color: var(--dark-aqua-green);
     transition: 0.5s smooth;
+}
+
+.btn--dark-acqua-green:hover{
+    background-color: #239DA5;
+}
+
+.btn--gray{
+    background-color: #132634;
+    transition: 0.5s smooth;
+}
+
+.btn--gray:hover{
+    border: 1px solid var(--aqua-green);
 }
 
 small {

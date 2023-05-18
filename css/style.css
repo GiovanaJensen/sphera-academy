@@ -107,36 +107,13 @@ h1{
     border: none;
     padding: .875rem;
     padding-left: 2.625rem;
+    color: var(--gray);
 }
-
-.form-control small{
-    visibility: hidden;
-}
-
-button{
-    cursor: pointer;
-}
-
-form .btn{
-    background-color: #05868E;
-    margin-top: 2rem;
-}
-
-
 
 .form > .link1{
     margin-top: 2rem;
     text-align: center;
     margin-bottom: 1rem;
-}
-
-.form > button{
-    background-color: #132634;
-}
-
-.form > button:hover{
-    border: 1px solid var(--aqua-green);
-    transition: 0.5s smooth;
 }
 
 .ajuda {
@@ -156,11 +133,6 @@ form .btn{
 
 .form span{
     color: var(--aqua-green);
-}
-
-
-.form input{
-    color: var(--gray);
 }
 
 ::-ms-reveal{
