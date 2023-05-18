@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
 
+:root{
+    --white: #FFFFFF;
+    --gray: #5E717F;
+    --white1: #F2F2FA;
+    --aqua-green: #7EDDD3;
+    --dark-blue: #071A28;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -21,9 +29,9 @@ body{
 main{
     font-family: 'IBM Plex Sans', sans-serif;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 20rem;
 }
 
 h1{
@@ -35,24 +43,131 @@ h1{
 
 .form{
     background-color: #071A28;
-}
+    padding: 5rem;
+    padding-block: 2rem;
+    padding-inline: 3.5rem;
+    border-radius: 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}   
 
 .form h2{
-    color: #fff;
+    color: var(--white);
+    font-size: 2.625rem;
+    font-weight: 500;
+}
+
+.form p{
+    font-size: 1.25rem;
+}
+
+.form hr{
+    width: 2rem;
+    height: .125rem;
+    background-color: var(--aqua-green);
+    border: none;
+    margin-top: .5rem;
+}
+
+.form form{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-control{
+    display: flex;
+    flex-direction: column;
+}
+
+.form label{
+    display: inline-block;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.input-with-icon{
+    position: relative;
+} 
+
+.input-with-icon img{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+.form form input{
+    width: 100%;
+    background-color: #132634;
+    border: none;
+    padding: .875rem;
+    padding-left: 2.625rem;
+}
+
+.form-control small{
+    visibility: hidden;
+}
+
+button{
+    cursor: pointer;
+}
+
+form .btn{
+    background-color: #05868E;
+    margin-top: 2rem;
+}
+
+
+
+.form > .link1{
+    margin-top: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.form > button{
+    background-color: #132634;
+}
+
+.form > button:hover{
+    border: 1px solid var(--aqua-green);
+    transition: 0.5s smooth;
+}
+
+.ajuda {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;   
+    gap: 3.5rem;
 }
 
 .form label, .form small, .link1{
-    color: #F2F2FA;
+    color: var(--white);
+}
+
+.link--primary {
+    text-align: end;
 }
 
 .form span{
-    color: #7EDDD3;
+    color: var(--aqua-green);
 }
 
-.form input::placeholder{
-    color: rgba(242, 242, 250, 0.7);
+
+.form input{
+    color: var(--gray);
 }
 
-.form p, .ajuda a{
-    color: rgba(242, 242, 250, 0.7);
+::-ms-reveal{
+    filter: invert(100%);
+}
+
+.form input::placeholder, .form p{
+    color: var(--gray);
+    font-size: 1rem;
 }
