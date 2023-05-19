@@ -11,9 +11,9 @@ form.addEventListener('submit', (e) => {
 function checkInputs(){
     const emailUserValue = emailUser.value.trim();
     const passwordValue = password.value.trim();
-
+    
     if(emailUserValue === ''){
-        setErrorFor(emailUser, 'Email ou usuário não pode estar vazia!');
+        setErrorFor(emailUser, 'Email inválido!');
     }else{
         setSuccessFor(emailUser);
     }
@@ -29,10 +29,11 @@ function checkInputs(){
 function setErrorFor(input, msg){
     const formControl = input.parentElement.parentElement;
     const small = document.createElement('small');
+    small.style.color = "#e82c2c"
+    small.style.marginBlock = "6px"
     small.innerText = msg;
     formControl.appendChild(small);
     formControl.className = 'form-control error';
-
 }   
 
 function setSuccessFor(input){
