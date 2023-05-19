@@ -38,6 +38,8 @@ function setErrorFor(input, msg){
 
 function setSuccessFor(input){
     const formControl = input.parentElement.parentElement;
+    const small = formControl.querySelector('small');
+    formControl.removeChild(small);
     formControl.className = 'form-control success';
     window.location = '../form-perfil.html';
 }
