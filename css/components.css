@@ -11,12 +11,25 @@
 .link--primary {
     text-decoration: none;
     color: var(--white);
+    transition: .2s all;
+}
+
+.link--primary:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+
 }
 
 .link--secondary {
     color: var(--gray);
+    opacity: 0.8;
+
     font-size: 1rem;
     text-underline-offset: 5px;
+}
+
+.link--secondary:hover {
+    opacity: 0.8;
 }
 
 .btn--base{
