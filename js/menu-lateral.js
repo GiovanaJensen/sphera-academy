@@ -1,24 +1,29 @@
 const rotas = 
 [
     {
-      "nome": "Minha conta",
-      "url": "/menu-lateral.html",
-      "icon": "fa-regular fa-circle-user"   
+        "nome": "Minha conta",
+        "url": "/menu-lateral.html",
+        "icon": "fa-regular fa-circle-user"  
     },
     {
-      "nome": "Universidades",
-      "url": "/universidades.html",
-      "icon": "icon"
+        "nome": "Universidades",
+        "url": "/universidades.html",
+        "icon": "fa-solid fa-graduation-cap"
     },
     {
-      "nome": "Bolsas",
-      "url": "/bolsas.html",
-      "icon": "icon"
+        "nome": "Bolsas",
+        "url": "/bolsas.html",
+        "icon": "fa-solid fa-bitcoin-sign"   
     },
     {  
-      "nome": "Jornadas",
-      "url": "/jornadas.html",
-      "icon": "icon"
+        "nome": "Jornadas",
+        "url": "/jornadas.html",
+        "icon": "fa-solid fa-tv"   
+    },
+    {  
+        "nome": "Contato",
+        "url": "/contato.html",
+        "icon": "fa-regular fa-comments"   
     }
 ]
   
@@ -37,17 +42,16 @@ rotas.forEach(item => {
     ancora.appendChild(span)
     
     li.classList.add("li-rotas")
-    ancora.classList.add("links-rotas")    
+    ancora.classList.add("links-rotas") 
     
     span.textContent = item.nome
+    icon.className = item.icon
     ancora.href = item.url
 
     const caminhoAtual = window.location.href
 
     var parsedUrl = new URL(caminhoAtual);
     var rota = parsedUrl.pathname;
-    console.log('item.url', item.url)
-    console.log('rota', rota)
 
     if(rota === item.url) {
         li.classList.add("route-active")

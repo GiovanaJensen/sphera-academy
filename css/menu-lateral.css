@@ -54,6 +54,12 @@
     align-items: center;
 }
 
+.links-rotas i {
+    color: var(--dark-acqua-green);
+    margin-right: 10px;
+
+}
+
 .route-active {
     background-color: var(--dark-blue-medium);
     border-left: 8px solid var(--dark-acqua-green);
