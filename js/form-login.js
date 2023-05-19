@@ -39,4 +39,5 @@ function setErrorFor(input, msg){
 function setSuccessFor(input){
     const formControl = input.parentElement.parentElement;
     formControl.className = 'form-control success';
+    window.location = '../form-perfil.html';
 }
