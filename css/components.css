@@ -83,3 +83,9 @@ small{
 .input--base:focus{
     outline: 1px solid var(--dark-acqua-green);
 }
+
+/* Códigos inseridos pelo Arthur */
+
+.input--base--radio{
+    display: inline;
+}

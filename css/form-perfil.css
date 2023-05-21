@@ -19,3 +19,12 @@ main{
     height: 100vh;
 }
 
+/* Códigos inseridos pelo Arthur */
+
+h1{
+    height: 228.632px;
+    width:324px;
+    background:url(../imgs/logo.svg);
+    text-indent: -9999px;
+}
+
