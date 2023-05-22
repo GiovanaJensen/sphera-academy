@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+}
+
+aside{
+    width: 20%;
+    height: 100vh;
+    background-color: orange;
+}
+
+main{
+    width: 80%;
+    height: 100vh;
+}
+
+/* Códigos inseridos pelo Arthur */
+
+h1{
+    height: 228.632px;
+    width:324px;
+    background:url(../imgs/logo.svg);
+    text-indent: -9999px;
+}
+
