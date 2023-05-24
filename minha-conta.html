@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sphera Academy | Form</title>
+    <link rel="stylesheet" href="./css/form-perfil.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="css/menu-lateral.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="js/menu-lateral.js" defer></script>
+  </head>
+  <body>
+    <aside class="menu">
+      <div id="logo-space">
+        <img src="/imgs/logo.svg" alt="Logo da Sphera Academy" />
+      </div>
+      <ul class="rotas"></ul>
+    </aside>
+    <main>
+      <section id="form">
+        <h3>Complete o seu perfil</h3>
+        <form>
+          <div class="form-control">
+            <label for="nome">Nome completo<span>*</span></label>
+            <input
+              class="input--base"
+              type="text"
+              name="nome"
+              id="nome"
+              placeholder="Confirme o seu nome"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label for="email">Endereço de e-mail<span>*</span></label>
+            <input
+              class="input--base"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Confirme o seu e-mail"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label for="cidade">Cidade<span>*</span></label>
+            <input
+              class="input--base"
+              type="text"
+              name="cidade"
+              id="cidade"
+              placeholder="Digite sua cidade atual"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label for="estado">Estado<span>*</span></label>
+            <input
+              class="input--base"
+              type="text"
+              name="estado"
+              id="estado"
+              placeholder="Digite seu estado atual"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label for="cep">CEP<span>*</span></label>
+            <input
+              class="input--base"
+              type="number"
+              name="cep"
+              id="cep"
+              placeholder="Digite seu CEP atual"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <legend>Selecione o seu gênero<span>*</span></legend>
+            <input
+              class="input--base--radio"
+              type="radio"
+              name="genero"
+              value="masculino"
+              id="masculino"
+              required
+            />
+            <label for="masculino">Masculino</label>
+            <input
+              class="input--base--radio"
+              type="radio"
+              name="genero"
+              value="feminino"
+              id="feminino"
+            />
+            <label for="feminino">Feminino</label>
+            <input
+              class="input--base--radio"
+              type="radio"
+              name="genero"
+              value="pnr"
+              id="pnr"
+            />
+            <label for="pnr">Prefiro não responder</label>
+            <input
+              class="input--base--radio"
+              type="radio"
+              name="genero"
+              value="outro"
+              id="outro"
+            />
+            <label for="outro">Outro</label>
+          </div>
+          <div class="form-control">
+            <label for="escola">Escola atual (Se estiver estudando)</label>
+            <input
+              class="input--base"
+              type="text"
+              name="escola"
+              id="escola"
+              placeholder="Digite sua escola atual"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label for="objetivo"
+              >Qual seu objetivo com a plataforma?<span>*</span></label
+            >
+            <select name="objetivo" id="objetivo" required>
+              <option selected>Selecione uma opção</option>
+              <option value="op1">Opção selecionada 1</option>
+              <option value="op2">Opção selecionada 2</option>
+            </select>
+          </div>
+          <div class="form-control">
+            <label for="ingles"
+              >Qual seu nível de inglês atual?<span>*</span></label
+            >
+            <select name="ingles" id="ingles" required>
+              <option selected>Selecione uma opção</option>
+              <option value="basico">Básico</option>
+              <option value="intermediario">Intermediário</option>
+              <option value="avancado">Avançado</option>
+              <option value="fluente">Fluente</option>
+            </select>
+          </div>
+          <div class="form-control">
+            <label for="onde-gostaria"
+              >Onde você gostaria de ter sua experiência internacional?<span
+                >*</span
+              ></label
+            >
+            <select name="onde-gostaria" id="onde-gostaria" required>
+              <option selected>Selecione uma opção</option>
+              <option value="op1">Opção selecionada 1</option>
+              <option value="op2">Opção selecionada 2</option>
+            </select>
+          </div>
+        </form>
+        <button class="link--primary">Enviar Dados</button>
+        <div class="ajuda">
+          <a href="#" class="link--secondary">Termos de uso</a>
+          <a href="#" class="link--secondary">Central de Ajuda</a>
+        </div>
+      </section>
+      <section>
+        <img
+          src="imgs/ilustrativo1.jpg"
+          alt="Foto ilustrativa de um homem navegando por meio de um notebook"
+        />
+      </section>
+    </main>
+  </body>
+</html>
