@@ -2,7 +2,7 @@ const rotas =
 [
     {
         "nome": "Minha conta",
-        "url": "/menu-lateral.html",
+        "url": "/minha-conta.html",
         "icon": "fa-regular fa-circle-user"  
     },
     {
