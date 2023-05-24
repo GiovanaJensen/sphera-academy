@@ -6,6 +6,8 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     checkInputs();
+
+    window.location = "minha-conta.html"
 })
 
 function checkInputs(){
@@ -14,6 +16,7 @@ function checkInputs(){
     
     if(emailUserValue === ''){
         setErrorFor(emailUser, 'Email inválido!');
+
     }else{
         setSuccessFor(emailUser);
     }
