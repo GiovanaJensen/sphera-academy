@@ -6,8 +6,6 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     checkInputs();
-
-    window.location = "minha-conta.html"
 })
 
 function checkInputs(){
@@ -31,6 +29,10 @@ function checkInputs(){
 
 function setErrorFor(input, msg){
     const formControl = input.parentElement.parentElement;
+    if(formControl.querySelector('small')){
+        const small = formControl.querySelector('small');
+        formControl.removeChild(small);
+    }
     const small = document.createElement('small');
     small.style.color = "#e82c2c"
     small.style.marginBlock = "6px"
@@ -44,5 +46,5 @@ function setSuccessFor(input){
     const small = formControl.querySelector('small');
     formControl.removeChild(small);
     formControl.className = 'form-control success';
-    window.location = '../form-perfil.html';
+    window.location = 'minha-conta.html';
 }
