@@ -38,6 +38,7 @@ function setSuccessFor(input){
     const small = formControl.querySelector('small');
     formControl.removeChild(small);
     formControl.className = 'form-control success';
+    window.location = 'index.html';
 }
 
 function isEmail(email){
