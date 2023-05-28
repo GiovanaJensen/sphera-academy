@@ -1,0 +1,89 @@
+body {
+    background-color: var(--dark-elegant);
+    display: flex;
+    color: white;
+}
+
+#mainjornadas {
+    width: calc(100% - 350px);
+    margin: 2rem;
+    background-color: #041725;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(89.5deg, #011B1D 4.74%, #05868E 52.6%, #009CBD 90.37%);
+    padding: 2rem;
+    border-radius: 12px
+}
+
+.header p {
+    font-weight: 300;
+}
+
+.continuarjornada {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 1rem;
+    margin: 1.5rem;
+    border-radius: 12px;
+    background: var(--card-background);
+}
+
+.continuarjornada .mba {
+    border-radius: 8px; 
+    background: linear-gradient(to right, #052435, #053344, #053446, #06273C);
+    display: flex;
+    align-items: center;
+    padding-right: 25px;
+}
+
+.continuarjornada .mba .left {
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+#percentual  {
+    text-align: end; 
+    width: 10%;
+}
+
+#graduacoes {
+    width: 100%;
+    overflow: hidden;
+    margin: 1.5rem;
+    display: flex;
+    list-style-type: none;
+}
+
+
+.graduacao {
+    min-width: 250px;
+    min-height: 350px;
+    margin-right: 10px;
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+.graduacao p {
+    color: white;
+    height: 100%;
+    width: 100%;
+    font-weight: bold;
+    font-size: 240px;
+    text-align: right;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.2em black
+
+}
+
+
+
