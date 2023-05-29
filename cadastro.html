@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Cadastro</title>
+</head>
+<body>
+    <main>
+        <h1>Sphera Academy</h1>
+        <div class="form">
+            <h2>Cadastre-se</h2>
+            <p>Preencha seus dados e crie uma conta:</p>
+            <hr>
+            <form title="Formulário de Login">
+                <div class="form-control">
+                    <label for="nome">Nome de usuário<span>*</span></label>
+                    <div class="input-with-icon">
+                        <img src="imgs/user.svg" alt="ícone de usuário">
+                        <input class="input--base" type="text" id="nome" name="nome" placeholder="Insira seu nome completo">
+                        <i class="fa-solid fa-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>      
+                    </div> 
+                </div>
+                <div class="form-control">
+                    <label for="email">Endereço de e-mail<span>*</span></label>
+                    <div class="input-with-icon">
+                        <img src="imgs/mail.svg" alt="ícone de email">
+                        <input class="input--base" type="email" id="email" name="email" placeholder="exemplo@gmail.com">
+                        <i class="fa-solid fa-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>      
+                    </div> 
+                </div>
+                <div class="form-control">
+                    <label for="senha1">Senha de acesso<span>*</span></label>
+                    <div class="input-with-icon">
+                        <img src="imgs/lock.svg" alt="ícone de cadeado">
+                        <input class="input--base" type="password" id="senha1" name="senha1" placeholder="Mínimo 8 caracteres">
+                        <i class="fa-solid fa-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>      
+                    </div> 
+                </div>
+                <div class="form-control">
+                    <label for="senha2">Repita a mesma senha<span>*</span></label>
+                    <div class="input-with-icon">
+                        <img src="imgs/lock.svg" alt="ícone de cadeado">
+                        <input class="input--base" type="password" id="senha2" name="senha2" placeholder="Mínimo 8 caracteres">
+                        <i class="fa-solid fa-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>      
+                    </div> 
+                </div>
+                <button class="btn--base btn--dark-acqua-green" style="margin-top: .75rem" type="submit">Criar conta</button>
+            </form>
+            <div class="ajuda">
+                <a href="#" class="link--secondary">Termos de uso</a>
+                <a href="#" class="link--secondary">Central de Ajuda</a>
+            </div>
+        </div>
+    </main>
+   <script src="js/form-esquece-senha.js"></script>
+</body>
+</html>
