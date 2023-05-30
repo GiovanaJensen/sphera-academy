@@ -8,6 +8,10 @@ form.addEventListener('submit', (e) => {
     checkInputs();
 })
 
+function criarConta(){
+    window.location = "cadastro.html";
+}
+
 function checkInputs(){
     const emailUserValue = emailUser.value.trim();
     const passwordValue = password.value.trim();
