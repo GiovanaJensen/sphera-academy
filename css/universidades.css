@@ -17,75 +17,76 @@ body {
     margin: 1.5em;
     border-radius: 12px;
     background-color: #051C2C;
+    border-left: 10px solid var(--dark-acqua-green);
 }
 
 .header p {
     font-weight: 300;
-    color: #768D9D;
+    color: var(--dark-acqua-green);
 }
 
-.continuarjornada {
+.universidades {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    /* gap: 10px; */
+}
+
+.universidade {
     display: flex;
-    flex-direction: column;
     gap: 20px;
     padding: 1rem;
     margin: 1.5rem;
     border-radius: 12px;
     background: #051C2C;
+    transition: .2s ease-in-out all;
 }
 
-.continuarjornada .mba {
-    border-radius: 8px; 
-    background: linear-gradient(to right, #052435, #053344, #053446, #06273C);
-    display: flex;
-    align-items: center;
-    padding-right: 25px;
+.universidade:hover {
+    transform: scale(1.01);
 }
 
-.continuarjornada .mba .left {
-    width: 90%;
-    display: flex;
-    align-items: center;
-}
-
-#percentual  {
-    text-align: end; 
-    width: 10%;
-}
-
-#graduacoes {
-    width: 100%;
-    overflow: hidden;
-    margin: 1.5rem;
-    display: flex;
-    list-style-type: none;
-}
-
-
-.graduacao {
-    min-width: 250px;
-    min-height: 350px;
-    margin-right: 10px;
-    background-color: #fff;
-    border-radius: 12px;
-}
-
-.graduacao p {
-    color: white;
-    height: 100%;
-    width: 100%;
-    font-weight: bold;
-    font-size: 240px;
-    text-align: right;
-    font-size: 25px;
+.universidade .detalhes {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    text-align: center;
-    text-shadow: 0.1em 0.1em 0.2em black
+    gap: 10px;
+}
 
+.universidade img {
+    max-width: 100%;
+    height: auto;
+    /* width: px; */
+    width: 180px;
+}
+
+.universidade .detalhes hr {
+    width: 70px;
+    border: 2px solid var(--dark-acqua-green);
+
+}
+
+.universidade .detalhes hr {
+    width: 70px;
+    border: 2px solid var(--dark-acqua-green);
+}
+
+.universidade .detalhes > div > span{
+    color: #95ACBC
+}
+
+
+.universidade > .detalhes > div > i {
+    background-color: var(--dark-acqua-green);
+    padding: 5px;
+    border-radius: 4px;
+    width: 30px;
+    text-align: center;
+    color: var(--acqua-green);
+    margin-right: 10px;
+    /* font-size: 15px; */
 }
 
 
 
+.universidade > .detalhes > div > i:last-child {
+    font-size: 20px;
+}
