@@ -82,4 +82,26 @@ body{
 
 /*form display: grid; grip-template-colums: 1fr 1fr; gap: 20px; */
 
+.form-control i{
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.success i.fa-check{
+    color: var(--acqua-green);
+    visibility: visible;
+}
+
+.error i.fa-circle-exclamation{
+    color: var(--acqua-green);
+    visibility: visible;
+}
+
+.error small{
+    visibility: visible;
+}
+
 

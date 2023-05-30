@@ -8,13 +8,7 @@
     <link rel="stylesheet" href="./css/form-perfil.css" />
     <link rel="stylesheet" href="./css/components.css" />
     <link rel="stylesheet" href="css/menu-lateral.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="js/menu-lateral.js" defer></script>
   </head>
   <body>
@@ -26,63 +20,78 @@
     </aside>
     <div class="papai">
     <main>
-      <section id="form">
+      <section id="form" class="form-perfil">
         <h3>Complete o seu perfil</h3>
         <form>
           <div class="form-control campo-cadastro">
             <label for="nome" class="subtitulos">Nome completo<span>*</span></label>
-            <input
-              class="input--base"
-              type="text"
-              name="nome"
-              id="nome"
-              placeholder="Confirme o seu nome"
-              required
-            />
+            <div class="input-with-icon">
+              <input
+                class="input--base"
+                type="text"
+                name="nome"
+                id="nome"
+                placeholder="Confirme o seu nome"
+              />
+              <i class="fa-solid fa-check"></i>
+              <i class="fa-solid fa-circle-exclamation"></i> 
+            </div>
           </div>
           <div class="form-control campo-cadastro">
             <label for="email" class="subtitulos">Endereço de e-mail<span>*</span></label>
-            <input
-              class="input--base"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Confirme o seu e-mail"
-              required
-            />
+            <div class="input-with-icon">
+              <input
+                class="input--base"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Confirme o seu e-mail"
+              />
+              <i class="fa-solid fa-check"></i>
+              <i class="fa-solid fa-circle-exclamation"></i>
+            </div>
           </div>
           <div class="form-control campo-cadastro">
             <label for="cidade" class="subtitulos">Cidade<span>*</span></label>
-            <input
-              class="input--base"
-              type="text"
-              name="cidade"
-              id="cidade"
-              placeholder="Confirme a sua cidade atual"
-              required
-            />
+            <div class="input-with-icon">
+              <input
+                class="input--base"
+                type="text"
+                name="cidade"
+                id="cidade"
+                placeholder="Confirme a sua cidade atual"
+              />
+              <i class="fa-solid fa-check"></i>
+              <i class="fa-solid fa-circle-exclamation"></i>
+            </div>
           </div>
           <div class="form-control campo-cadastro">
             <label for="estado" class="subtitulos">Estado<span>*</span></label>
-            <input
-              class="input--base"
-              type="text"
-              name="estado"
-              id="estado"
-              placeholder="Confirme o seu estado atual"
-              required
-            />
+            <div class="input-with-icon">
+              <input
+                class="input--base"
+                type="text"
+                name="estado"
+                id="estado"
+                placeholder="Confirme o seu estado atual"
+              />
+              <i class="fa-solid fa-check"></i>
+              <i class="fa-solid fa-circle-exclamation"></i>
+            </div>
           </div>
           <div class="form-control campo-cadastro">
             <label for="cep" class="subtitulos">CEP<span>*</span></label>
-            <input
-              class="input--base"
-              type="number"
-              name="cep"
-              id="cep"
-              placeholder="Confirme o seu CEP atual"
-              required
-            />
+            <div class="input-with-icon">
+              <input
+                class="input--base"
+                type="number"
+                name="cep"
+                id="cep"
+                placeholder="Confirme o seu CEP atual"
+              />
+              <i class="fa-solid fa-check"></i>
+              <i class="fa-solid fa-circle-exclamation"></i>
+            </div>
           </div>
           <div class="form-control">
             <legend class="subtitulos">Selecione o seu gênero<span>*</span></legend>
@@ -92,7 +101,7 @@
               name="genero"
               value="masculino"
               id="masculino"
-              required
+              selected
             />
             <label for="masculino">Masculino</label>
             <input
@@ -128,21 +137,20 @@
               name="escola"
               id="escola"
               placeholder="Digite sua escola atual"
-              required
             />
           </div>
           <div class="form-control campo-cadastro">
             <label for="objetivo" class="subtitulos">Qual seu objetivo com a plataforma?<span>*</span></label>
-            <select name="objetivo" id="objetivo" required>
-              <option selected>Selecione uma opção</option>
+            <select name="objetivo" id="objetivo">
+              <option value="null" selected>Selecione uma opção</option>
               <option value="op1">Opção selecionada 1</option>
               <option value="op2">Opção selecionada 2</option>
             </select>
           </div>
           <div class="form-control campo-cadastro">
             <label for="ingles" class="subtitulos">Qual seu nível de inglês atual?<span>*</span></label>
-            <select name="ingles" id="ingles" required>
-              <option selected>Selecione uma opção</option>
+            <select name="ingles" id="ingles">
+              <option value="null" selected>Selecione uma opção</option>
               <option value="basico">Básico</option>
               <option value="intermediario">Intermediário</option>
               <option value="avancado">Avançado</option>
@@ -151,23 +159,24 @@
           </div>
           <div class="form-control campo-cadastro">
             <label for="onde-gostaria" class="subtitulos">Onde você gostaria de ter sua experiência internacional?<span>*</span></label>
-            <select name="onde-gostaria" id="onde-gostaria" required>
-              <option selected>Selecione uma opção</option>
+            <select name="onde-gostaria" id="onde-gostaria">
+              <option value="null" selected>Selecione uma opção</option>
               <option value="op1">Opção selecionada 1</option>
               <option value="op2">Opção selecionada 2</option>
             </select>
           </div>
-        </form>
-        <div class="footer-main">
-          <button class="btn--base btn--dark-acqua-green">Enviar Dados</button>
-          <div class="ajuda">
-            <a href="#" class="link--secondary">Termos de uso</a>
-            <a href="#" class="link--secondary">Central de Ajuda</a>
+          <div class="footer-main">
+            <button type="submit" class="btn--base btn--dark-acqua-green">Enviar Dados</button>
+            <div class="ajuda">
+              <a href="#" class="link--secondary">Termos de uso</a>
+              <a href="#" class="link--secondary">Central de Ajuda</a>
+            </div>
           </div>
-        </div>
+        </form>
       </section>
     </div>
     </main>
     <img class="ilustrativo--lateral" src="imgs/ilustrativo1.jpg" alt="Foto ilustrativa de um homem navegando por meio de um notebook"/>
+    <script src="js/form-perfil.js"></script>
   </body>
 </html>
