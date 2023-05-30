@@ -6,7 +6,12 @@
     --dark-acqua-green: #05868E;
     --dark-blue: #071A28;
     --dark-elegant: #051C2C;
-    --dark-blue-medium: #0D2434 
+    --dark-blue-medium: #0D2434; 
+    /* Alterações do arthur */
+    --full-dark: #041725;
+    --common-margin: 24px;
+    --common-border-radius: 8px; 
+    /* fim */
 }
 
 

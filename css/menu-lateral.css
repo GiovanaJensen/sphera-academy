@@ -6,6 +6,13 @@
 }
 
 .menu {
+    /* Alterações do arthur */
+    border-radius: var(--common-border-radius);
+    margin-left: var(--common-margin);
+    margin-right: var(--common-margin);
+    margin-top: var(--common-margin);
+    margin-bottom: var(--common-margin);
+    /* fim */
     min-height: 100vh;
     width: 350px;
     background-color: var(--dark-elegant);
