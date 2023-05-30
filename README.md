@@ -22,7 +22,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-O Sphera Academy é um site realizado para uma empresa com foco educacional. Acesse o site clicando [neste link](https://giovanajensen.github.io/sphera-academy/)
+O Sphera Academy é um site realizado para uma empresa com foco educacional. Acesse o site clicando [neste link](https://sphera-academy.vercel.app/)
 
 ## 🔖 Layout
 

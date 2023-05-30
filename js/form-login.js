@@ -8,12 +8,17 @@ form.addEventListener('submit', (e) => {
     checkInputs();
 })
 
+function criarConta(){
+    window.location = "cadastro.html";
+}
+
 function checkInputs(){
     const emailUserValue = emailUser.value.trim();
     const passwordValue = password.value.trim();
     
     if(emailUserValue === ''){
         setErrorFor(emailUser, 'Email inválido!');
+
     }else{
         setSuccessFor(emailUser);
     }
@@ -28,6 +33,10 @@ function checkInputs(){
 
 function setErrorFor(input, msg){
     const formControl = input.parentElement.parentElement;
+    if(formControl.querySelector('small')){
+        const small = formControl.querySelector('small');
+        formControl.removeChild(small);
+    }
     const small = document.createElement('small');
     small.style.color = "#e82c2c"
     small.style.marginBlock = "6px"
@@ -38,8 +47,12 @@ function setErrorFor(input, msg){
 
 function setSuccessFor(input){
     const formControl = input.parentElement.parentElement;
-    const small = formControl.querySelector('small');
-    formControl.removeChild(small);
+
+    if(formControl.querySelector('small')){
+        const small = formControl.querySelector('small');
+        formControl.removeChild(small);
+    }
+    
     formControl.className = 'form-control success';
-    window.location = '../form-perfil.html';
+    window.location = 'minha-conta.html';
 }

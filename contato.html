@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sphera Academy | Contato</title>    
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/form-contato.css">
+    <link rel="stylesheet" href="css/menu-lateral.css" />
+    <script src="js/menu-lateral.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <aside class="menu">
+      <div id="logo-space">
+        <img src="/imgs/logo.svg" alt="Logo da Sphera Academy" />
+      </div>
+      <ul class="rotas"></ul>
+    </aside>
+    
+    <main>
+      
+      <div class="form">
+          <h2>Não encontrou o que precisava?</h2>
+          <hr>
+          <form
+          action=""
+          method="POST"
+          data-form>
+              <div class="form-control">
+                  <label for="email-user">Seu e-mail de contato<span>*</span></label>
+                  <div class="input-with-icon">
+                      <img src="imgs/mail.svg" alt="ícone de email">
+                      <input class="input--base" type="text" id="email-user" name="email-user" placeholder="exemplo@gmail.com">
+                      <i class="fa-solid fa-check"></i>
+                      <i class="fa-solid fa-circle-exclamation"></i>
+                  </div>
+              </div>
+  
+              <div class="form-control">
+                  <label for="assunto">Assunto da mensagem<span>*</span></label>
+                  <div class="input-with-icon">
+                    <input class="input--base" type="text" name="assunto" id="assunto" placeholder="Digite o assunto da mensagem">
+                    <i class="fa-solid fa-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                  </div>
+  
+              </div>
+  
+              <div class="form-control">
+                  <label for="mensagem">Mensagem<span>*</span></label>
+                  <div class="input-with-icon">
+                    <textarea class="input--base" name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Digite sua mensagem"></textarea>
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+  
+              </div>
+  
+              <button class="btn--base btn--dark-acqua-green" type="submit" data-button>Enviar mensagem</button>
+          </form>
+          </div>
+      </div>
+  </main>
+  <script src="./js/form-contato.js"></script>
+  </body>
+</html>
