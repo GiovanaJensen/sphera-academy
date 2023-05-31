@@ -1,3 +1,8 @@
+const isUserLogado = localStorage.getItem('userToken').trim() !== ""
+console.log('isUserLogado', isUserLogado)
+      
+if(!isUserLogado) window.location = "index.html"
+
 document.addEventListener("DOMContentLoaded", () => {
   const nome = document.querySelector("#nome");
   const email = document.querySelector("#email");
