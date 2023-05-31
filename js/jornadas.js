@@ -1,3 +1,7 @@
+const isUserAuth = localStorage.getItem("userToken")
+
+if(!isUserAuth) window.location = "index.html" 
+
 const listaGraduacoes = [
   {
     img: "../imgs/argentina.webp",

@@ -1,3 +1,7 @@
+const isUserAuth = localStorage.getItem("userToken")
+
+if(!isUserAuth) window.location = "index.html" 
+
 const form = document.querySelector('form');
 const emailUser = document.querySelector('#email-user');
 const assunto = document.querySelector('#assunto');
