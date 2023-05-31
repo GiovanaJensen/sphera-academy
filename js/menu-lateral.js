@@ -23,7 +23,7 @@ const rotas =
 ]
 
 const rotasMenu = document.querySelector(".rotas")
-
+const buttonLogout = document.querySelector('.logout')
 
 rotas.forEach(item => {
     const li = document.createElement('li')
@@ -53,3 +53,9 @@ rotas.forEach(item => {
         li.classList.add("route-active")
     }
 })
+
+buttonLogout.addEventListener('click', () => {
+    localStorage.clear()
+    window.location = "index.html"
+})
+

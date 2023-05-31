@@ -113,8 +113,7 @@ function criarDivUniversidade(universidade) {
 // Função para criar as divs universidade para cada objeto do JSON
 function criarDivsUniversidades() {
   var container = document.querySelector(".universidades");
-  console.log("container", container);
-
+  
   for (var i = 0; i < universidades.length; i++) {
     var universidade = universidades[i];
     var divUniversidade = criarDivUniversidade(universidade);

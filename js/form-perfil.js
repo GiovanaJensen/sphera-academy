@@ -111,23 +111,6 @@ document.addEventListener("DOMContentLoaded", () => {
       setSuccessFor(ondeGostaria);
     }
 
-    const isValid =
-      nomeValue !== "" &&
-      emailValue !== "" &&
-      cidadeValue !== "" &&
-      estadoValue !== "" &&
-      !cepValue.length === 8 &&
-      objetivoValue !== "" &&
-      inglesValue !== "" &&
-      ondeValue !== "";
-
-    if (isValid) {
-      // Exibe o alerta "Tudo ok"
-      alert("Tudo ok");
-
-    } else {
-        console.log("ainda não")
-    }
   }
 
 

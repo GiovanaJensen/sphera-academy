@@ -7,10 +7,12 @@
 
 .menu {
     /* Alterações do arthur */
-    min-height: 100vh;
+    height: 100vh;
     width: 350px;
     background-color: var(--dark-elegant);
     min-width: 350px;
+    position: relative;
+    
 }
 
 #logo-space {
@@ -35,17 +37,15 @@
 }
 
 .li-rotas {
-    /* padding-block: 20px; */
     height: 70px;
     font-size: 20px;
     width: 100%;
-    height: 70px;
     display: flex;
     justify-content: center;
 
 }
 
-.li-rotas:hover {
+.li-rotas:hover, .logout:hover {
     background-color: var(--dark-blue-medium);
     border-left: 8px solid var(--dark-acqua-green);
 }
@@ -60,7 +60,7 @@
     align-items: center;
 }
 
-.links-rotas i {
+.links-rotas > i, .logout > i {
     color: var(--dark-acqua-green);
     margin-right: 10px;
 
@@ -71,5 +71,23 @@
     border-left: 8px solid var(--dark-acqua-green);
 }
 
+.logout {
+    width: 100%;
+    height: 70px;
+    font-size: 20px;
+    /* width:  */
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    white-space: nowrap;
+    background-color: var(--dark-elegant);
+    border: none;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+}
 
-
+.logout i {
+    margin-left: 15px;
+}
