@@ -30,8 +30,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20rem;
-    padding: 30rem;
+    width: calc(100% - 350px);
 }
 
 h1{

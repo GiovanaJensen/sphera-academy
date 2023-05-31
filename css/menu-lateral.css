@@ -10,12 +10,17 @@
     min-height: 100vh;
     width: 350px;
     background-color: var(--dark-elegant);
+    min-width: 350px;
 }
 
 #logo-space {
-    min-height: 20%;
-    max-height: 20%;
-    height: 20%;
+    min-height: 250px;
+    max-height: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
     /* background-color: #b1a1a1; */
 }
 
