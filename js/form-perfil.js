@@ -58,7 +58,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const emailValue = email.value.trim();
     const cidadeValue = cidade.value.trim();
     const estadoValue = estado.value.trim();
-    const cepValue = cep.value.trim();
     const objetivoValue = objetivo.value.trim();
     const inglesValue = ingles.value.trim();
     const ondeValue = ondeGostaria.value.trim();
@@ -87,12 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
       setSuccessFor(estado);
     }
 
-    if (cepValue === "" || cepValue.length != 8) {
-      setErrorFor(cep, "CEP Inválido!");
-    } else {
-      setSuccessFor(cep);
-    }
-
     if (objetivoValue === "") {
       setErrorFor(objetivo, "É necessário informar o seu objetivo!");
     } else {
@@ -111,6 +104,21 @@ document.addEventListener("DOMContentLoaded", () => {
       setSuccessFor(ondeGostaria);
     }
 
+    const isValid =
+      nomeValue !== "" &&
+      emailValue !== "" &&
+      cidadeValue !== "" &&
+      estadoValue !== "" &&
+      objetivoValue !== "" &&
+      inglesValue !== "" &&
+      ondeValue !== "";
+
+    if (isValid) {
+      window.location = "jornadas.html";
+
+    } else {
+        console.log("ainda não")
+    }
   }
 
 
@@ -184,9 +192,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   cep.addEventListener("change", () => {
-    let cepValue = cep.value;
+    let cepValue = cep.value.trim();
     if (cepValue.length === 8) {
       buscarCidadeEstadosByCep(cepValue);
+    }else if (cepValue === ""){
+      setErrorFor(cep, "É necessário informar o seu CEP!")
+    }else if (cepValue != 8){
+      setErrorFor(cep, "O CEP precisa ter 8 caracteres!")
     }
   });
+
+
 });
