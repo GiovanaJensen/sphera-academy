@@ -10,11 +10,6 @@ const rotas =
         "url": "/universidades.html",
         "icon": "fa-solid fa-graduation-cap"
     },
-    {
-        "nome": "Bolsas",
-        "url": "/bolsas.html",
-        "icon": "fa-solid fa-bitcoin-sign"   
-    },
     {  
         "nome": "Jornadas",
         "url": "/jornadas.html",

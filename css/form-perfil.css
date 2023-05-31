@@ -8,79 +8,112 @@ body{
     display: flex;
 }
 
-aside{
-    width: 20%;
-    height: 100vh;
-    background-color: orange;
-}
-
 main{
     width: 80%;
     height: 100vh;
 }
 
-/* Códigos inseridos pelo Arthur */
-
-h1{
-    height: 228.632px;
-    width:324px;
-    background:url(../imgs/logo.svg);
-    text-indent: -9999px;
-}
-
-body{
-    display: flex;
-    background-color: var(--full-dark);
-    color: white;
-    flex-direction: row;
-}
-
-.ilustrativo--lateral{
-    border-radius: 12px;
-
-}
-
-.subtitulos{
-    /* a rever */
-    display: flex;
-    margin-bottom: 16px;
-}
-
-.campo-cadastro{
-    margin-bottom: 40px;
-}
-
-.form-control span{
+.asterisco {
     color: var(--acqua-green);
 }
 
-.footer-main {
+/* Códigos inseridos pelo Arthur */
+
+body{
+    background-color: var(--dark-elegant);
+}
+
+.container {
+    width: calc(100% - 350px);
+    margin: 2rem;
+    overflow: hidden;
     display: flex;
-    flex-direction: row;
-    column-gap: 28px;
+    gap: 1rem;
 }
 
-.footer-main > .ajuda{
+.container .formulario {
+    background-color: white;
+    width: 65%;
+    min-height: 100%;
+    border-radius: 12px;
+    background-color: #041725;
+    padding: 50px;
+    color: white;
+}
+
+.container .formulario h1{
+    font-weight: 400;
+}
+
+
+.container .formulario hr{
+    width: 70px;
+    border: 2px solid var(--dark-acqua-green);
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+
+.container .imagem {
+    width: 35%;
+    min-height: 100%;
+    border-radius: 12px;
+    background-color: #041725;
+    background-image: url("../imgs/ilustrativo.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.formularioCampos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.formularioCampos > .campo-formulario {
+    flex: 1 1 50%;
     display: flex;
-    flex-direction: row;
-    column-gap: 24px;
+    flex-direction: column;
+    gap: 5px;
 }
 
-.papai{
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    gap: 20px;
-}
+.campo-formulario:nth-child(2n) {
+    margin-right: 10px; /* Remove o espaçamento à direita das divs pares */
+  }
 
-.papai-form{
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    gap: 20px;
-}
 
-/*div pai display: grid; grip-template-colums: repeat(2, 50%); gap: 20px; */
 
-/*form display: grid; grip-template-colums: 1fr 1fr; gap: 20px; */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* validações de formulário arthur */
 
 .form-control i{
     visibility: hidden;

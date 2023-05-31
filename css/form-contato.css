@@ -78,7 +78,7 @@ h1{
     gap: 20px;
 }
 
-.form-control{
+.form-controle{
     display: flex;
     flex-direction: column;
 }
@@ -135,7 +135,7 @@ h1{
     font-size: 1rem;
 }
 
-.form-control i{
+.form-controle i{
     visibility: hidden;
     position: absolute;
     top: 50%;
