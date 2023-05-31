@@ -1,3 +1,7 @@
+const isUserAuth = localStorage.getItem("userToken")
+
+if(!isUserAuth) window.location = "index.html" 
+
 // Exemplo de JSON com objetos de universidades
 var universidades = [
   {

@@ -1,3 +1,8 @@
+const isUserAuth = localStorage.getItem("userToken")
+
+if(!isUserAuth) window.location = "index.html" 
+
+
 const fakeAuthData = [
   {
       nome: "Barbara Hellen", 
@@ -35,8 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const ingles = document.querySelector("#ingles");
   const ondeGostaria = document.querySelector("#onde-gostaria");
   const formPerfil = document.querySelector("#formPerfil");
-
-
 
   formPerfil.addEventListener("submit", (e) => {
     e.preventDefault();
