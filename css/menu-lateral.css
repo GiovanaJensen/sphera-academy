@@ -7,8 +7,6 @@
 
 .menu {
     /* Alterações do arthur */
-    border-radius: var(--common-border-radius);
-    margin-top: var(--common-margin);
     min-height: 100vh;
     width: 350px;
     background-color: var(--dark-elegant);

@@ -1,107 +1,156 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    display: flex;
+body {
+  display: flex;
 }
 
-aside{
-    width: 20%;
-    height: 100vh;
-    background-color: orange;
+main {
+  width: 80%;
+  height: 100vh;
 }
 
-main{
-    width: 80%;
-    height: 100vh;
+.asterisco {
+  color: var(--acqua-green);
 }
 
 /* Códigos inseridos pelo Arthur */
 
-h1{
-    height: 228.632px;
-    width:324px;
-    background:url(../imgs/logo.svg);
-    text-indent: -9999px;
+body {
+  background-color: var(--dark-elegant);
 }
 
-body{
+.container {
+  width: calc(100% - 350px);
+  margin: 2rem;
+  overflow: hidden;
+  display: flex;
+  gap: 1rem;
+}
+
+.container .formulario {
+  background-color: white;
+  width: 65%;
+  min-height: 100%;
+  border-radius: 12px;
+  background-color: #041725;
+  padding: 50px;
+  color: white;
+}
+
+.container .formulario h1 {
+  font-weight: 400;
+}
+
+.container .formulario hr {
+  width: 70px;
+  border: 2px solid var(--dark-acqua-green);
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.container .imagem {
+  width: 35%;
+  min-height: 100%;
+  border-radius: 12px;
+  background-color: #041725;
+  background-image: url("../imgs/ilustrativo.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.formularioCampos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.formularioCampos > .campo-formulario {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#selecionegenero {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.radio-button {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.radio-input {
+  display: none;
+}
+
+.radio-dot {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--dark-acqua-green);
+  margin-right: 6px;
+}
+
+.radio-input:checked + .radio-dot {
+  background-color: var(--dark-acqua-green);
+  padding: 1px;
+}
+
+.radio-label {
+  font-size: 16px;
+}
+
+/* .radio-group {
     display: flex;
-    background-color: var(--full-dark);
-    color: white;
-    flex-direction: row;
+  }
+  
+
+  
+
+  
+  .radio-input:checked + .radio-label {
+    background-color: #000;
+  } */
+
+/* validações de formulário arthur */
+
+.form-control i {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
 }
 
-.ilustrativo--lateral{
-    border-radius: 12px;
-
+.success i.fa-check {
+  color: var(--acqua-green);
+  visibility: visible;
 }
 
-.subtitulos{
-    /* a rever */
-    display: flex;
-    margin-bottom: 16px;
+.error i.fa-circle-exclamation {
+  color: var(--acqua-green);
+  visibility: visible;
 }
 
-.campo-cadastro{
-    margin-bottom: 40px;
+.error small {
+  visibility: visible;
 }
-
-.form-control span{
-    color: var(--acqua-green);
-}
-
-.footer-main {
-    display: flex;
-    flex-direction: row;
-    column-gap: 28px;
-}
-
-.footer-main > .ajuda{
-    display: flex;
-    flex-direction: row;
-    column-gap: 24px;
-}
-
-.papai{
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    gap: 20px;
-}
-
-.papai-form{
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    gap: 20px;
-}
-
-/*div pai display: grid; grip-template-colums: repeat(2, 50%); gap: 20px; */
-
-/*form display: grid; grip-template-colums: 1fr 1fr; gap: 20px; */
-
-.form-control i{
-    visibility: hidden;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-}
-
-.success i.fa-check{
-    color: var(--acqua-green);
-    visibility: visible;
-}
-
-.error i.fa-circle-exclamation{
-    color: var(--acqua-green);
-    visibility: visible;
-}
-
-.error small{
-    visibility: visible;
-}
-
-

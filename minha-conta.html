@@ -5,11 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sphera Academy | Minha conta</title>
-    <link rel="stylesheet" href="./css/form-perfil.css" />
-    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="css/form-perfil.css" />
+    <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/menu-lateral.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="js/menu-lateral.js" defer></script>
+    <script src="js/form-perfil.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
   </head>
   <body>
     <aside class="menu">
@@ -18,165 +28,120 @@
       </div>
       <ul class="rotas"></ul>
     </aside>
-    <div class="papai">
-    <main>
-      <section id="form" class="form-perfil">
-        <h3>Complete o seu perfil</h3>
-        <form>
-          <div class="form-control campo-cadastro">
-            <label for="nome" class="subtitulos">Nome completo<span>*</span></label>
-            <div class="input-with-icon">
+    <div class="container">
+      <div class="formulario">
+        <h1>Complete o seu perfil</h1>
+        <hr />
+
+        <form id="formPerfil">
+          <div class="formularioCampos">
+            <div class="campo-formulario">
+              <label for="nome">Nome completo<i class="asterisco">*</i></label>
+              <input class="input--base__noicon" type="text" name="nome" id="nome" />
+            </div>
+            <div class="campo-formulario">
+              <label for="escola">Escolha atual (Se estiver estudando)</label>
               <input
-                class="input--base"
+                class="input--base__noicon"
                 type="text"
-                name="nome"
-                id="nome"
-                placeholder="Confirme o seu nome"
+                name="escola"
+                id="escola"
               />
-              <i class="fa-solid fa-check"></i>
-              <i class="fa-solid fa-circle-exclamation"></i> 
             </div>
-          </div>
-          <div class="form-control campo-cadastro">
-            <label for="email" class="subtitulos">Endereço de e-mail<span>*</span></label>
-            <div class="input-with-icon">
+            <div class="campo-formulario">
+              <label for="email"
+                >Endereço de e-mail<i class="asterisco">*</i></label
+              >
+              <input class="input--base__noicon" type="text" name="email" id="email" />
+            </div>
+            <div class="campo-formulario">
+              <!-- CAMPO SELECT -->
+              <label for="objetivo"
+                >Qual seu objetivo com a plataforma?<i class="asterisco"
+                  >*</i
+                ></label
+              >
               <input
-                class="input--base"
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Confirme o seu e-mail"
+                class="input--base__noicon"
+                type="text"
+                name="objetivo"
+                id="objetivo"
               />
-              <i class="fa-solid fa-check"></i>
-              <i class="fa-solid fa-circle-exclamation"></i>
             </div>
-          </div>
-          <div class="form-control campo-cadastro">
-            <label for="cidade" class="subtitulos">Cidade<span>*</span></label>
-            <div class="input-with-icon">
+            <div class="campo-formulario">
+              <label for="cep">CEP<i class="asterisco">*</i></label>
               <input
-                class="input--base"
+                class="input--base__noicon"
+                type="text"
+                name="cep"
+                id="cep"
+                maxlength="8"
+              />
+            </div>
+            <div class="campo-formulario">
+              <label for="cidade">Cidade<i class="asterisco">*</i></label>
+              <input
+                class="input--base__noicon"
                 type="text"
                 name="cidade"
                 id="cidade"
-                placeholder="Confirme a sua cidade atual"
               />
-              <i class="fa-solid fa-check"></i>
-              <i class="fa-solid fa-circle-exclamation"></i>
             </div>
-          </div>
-          <div class="form-control campo-cadastro">
-            <label for="estado" class="subtitulos">Estado<span>*</span></label>
-            <div class="input-with-icon">
+            
+            <div class="campo-formulario">
+              <label for="estado">Estado<i class="asterisco">*</i></label>
               <input
-                class="input--base"
+                class="input--base__noicon"
                 type="text"
                 name="estado"
                 id="estado"
-                placeholder="Confirme o seu estado atual"
               />
-              <i class="fa-solid fa-check"></i>
-              <i class="fa-solid fa-circle-exclamation"></i>
             </div>
-          </div>
-          <div class="form-control campo-cadastro">
-            <label for="cep" class="subtitulos">CEP<span>*</span></label>
-            <div class="input-with-icon">
+            <div class="campo-formulario">
+              <!-- CAMPO SELECT -->
+              <label for="ingles"
+                >Qual seu nível de inglês atual?<i class="asterisco"
+                  >*</i
+                ></label
+              >
               <input
-                class="input--base"
-                type="number"
-                name="cep"
-                id="cep"
-                placeholder="Confirme o seu CEP atual"
+                class="input--base__noicon"
+                type="text"
+                name="ingles"
+                id="ingles"
               />
-              <i class="fa-solid fa-check"></i>
-              <i class="fa-solid fa-circle-exclamation"></i>
+            </div>
+            <div class="campo-formulario">
+              <label for="onde-gostaria">Escolha o país para realizar a experiência</label>
+              <input  class="input--base__noicon" type="text" name="onde-gostaria" id="onde-gostaria" autocomplete="false"/>
             </div>
           </div>
-          <div class="form-control">
-            <legend class="subtitulos">Selecione o seu gênero<span>*</span></legend>
-            <input
-              class="input--base--radio"
-              type="radio"
-              name="genero"
-              value="masculino"
-              id="masculino"
-              selected
-            />
-            <label for="masculino">Masculino</label>
-            <input
-              class="input--base--radio"
-              type="radio"
-              name="genero"
-              value="feminino"
-              id="feminino"
-            />
-            <label for="feminino">Feminino</label>
-            <input
-              class="input--base--radio"
-              type="radio"
-              name="genero"
-              value="pnr"
-              id="pnr"
-            />
-            <label for="pnr">Prefiro não responder</label>
-            <input
-              class="input--base--radio"
-              type="radio"
-              name="genero"
-              value="outro"
-              id="outro"
-            />
-            <label for="outro">Outro</label>
+          <p id="selecionegenero">Selecione o seu gênero</p>
+          <div class="radio-group">
+            <label class="radio-button">
+              <input type="radio" name="option" class="radio-input">
+              <span class="radio-dot"></span>
+              <span class="radio-label">Masculino</span>
+            </label>
+          
+            <label class="radio-button">
+              <input type="radio" name="option" class="radio-input">
+              <span class="radio-dot"></span>
+              <span class="radio-label">Feminino</span>
+            </label>
+          
+            <label class="radio-button">
+              <input type="radio" name="option" class="radio-input">
+              <span class="radio-dot"></span>
+              <span class="radio-label">Outro</span>
+            </label>
           </div>
-          <div class="form-control campo-cadastro">
-            <label for="escola" class="subtitulos">Escola atual (Se estiver estudando)</label>
-            <input
-              class="input--base"
-              type="text"
-              name="escola"
-              id="escola"
-              placeholder="Digite sua escola atual"
-            />
-          </div>
-          <div class="form-control campo-cadastro">
-            <label for="objetivo" class="subtitulos">Qual seu objetivo com a plataforma?<span>*</span></label>
-            <select name="objetivo" id="objetivo">
-              <option value="null" selected>Selecione uma opção</option>
-              <option value="op1">Opção selecionada 1</option>
-              <option value="op2">Opção selecionada 2</option>
-            </select>
-          </div>
-          <div class="form-control campo-cadastro">
-            <label for="ingles" class="subtitulos">Qual seu nível de inglês atual?<span>*</span></label>
-            <select name="ingles" id="ingles">
-              <option value="null" selected>Selecione uma opção</option>
-              <option value="basico">Básico</option>
-              <option value="intermediario">Intermediário</option>
-              <option value="avancado">Avançado</option>
-              <option value="fluente">Fluente</option>
-            </select>
-          </div>
-          <div class="form-control campo-cadastro">
-            <label for="onde-gostaria" class="subtitulos">Onde você gostaria de ter sua experiência internacional?<span>*</span></label>
-            <select name="onde-gostaria" id="onde-gostaria">
-              <option value="null" selected>Selecione uma opção</option>
-              <option value="op1">Opção selecionada 1</option>
-              <option value="op2">Opção selecionada 2</option>
-            </select>
-          </div>
-          <div class="footer-main">
-            <button type="submit" class="btn--base btn--dark-acqua-green">Enviar Dados</button>
-            <div class="ajuda">
-              <a href="#" class="link--secondary">Termos de uso</a>
-              <a href="#" class="link--secondary">Central de Ajuda</a>
-            </div>
-          </div>
+            <button class="btn--base btn--dark-acqua-green" style="margin-top: 2.3rem" type="submit">Salvar alterações</button>
         </form>
-      </section>
+      </div>
+      <div class="imagem"></div>
     </div>
-    </main>
-    <img class="ilustrativo--lateral" src="imgs/ilustrativo1.jpg" alt="Foto ilustrativa de um homem navegando por meio de um notebook"/>
-    <script src="js/form-perfil.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- <img class="ilustrativo--lateral" src="imgs/ilustrativo1.webp" alt="Foto ilustrativa de um homem navegando por meio de um notebook"/> -->
   </body>
 </html>
