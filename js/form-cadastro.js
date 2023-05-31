@@ -43,6 +43,18 @@ function checkInputs(){
     }else{
         setSuccessFor(senha2);
     }
+
+    const isValid =
+    nomeValue !== "" &&
+    emailValue !== "" &&
+    senha1Value !== "" &&
+    senha2Value !== "";
+
+  if (isValid) {
+    window.location = "index.html";
+  } else {
+      console.log("ainda não")
+  }
 }
 
 function setErrorFor(input, msg) {
@@ -69,7 +81,6 @@ function setSuccessFor(input){
     }
 
     formControl.className = 'form-control success';
-    window.location = 'index.html';
 }
 
 function isEmail(email){
