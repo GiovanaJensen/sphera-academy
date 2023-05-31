@@ -1,3 +1,28 @@
+const fakeAuthData = [
+    {
+        nome: "Barbara Hellen", 
+        email: "barbarapereira123@hotmail.com", 
+        senha: "@Barbara1505",
+        dtnascimento: "15/05/2001", 
+        token: "qH2P4nV5sO8eL1k"
+    }, 
+    {
+        nome: "Sphera Admin", 
+        email: "admin@sphera.com",
+        senha: "@Admin22",
+        dtnascimento: '12/12/2000' ,
+        token: "dG5a9rT3cY7jX1w"
+    }, 
+    {
+        nome: "Felipe Cannarozzo", 
+        email: "cannarozzo@felipe.com", 
+        senha: "@voudar10pravcs",
+        dtnascimento: "12/6/1998", 
+        token: "mJ6iN2bF8vK3xR4"
+    }
+]
+
+
 const form = document.querySelector('form');
 const emailUser = document.querySelector('#email-user');
 const password = document.querySelector('#password');
@@ -21,15 +46,7 @@ function checkInputs(){
 
     }else{
         setSuccessFor(emailUser);
-    }
-
-    if(passwordValue === ''){
-        setErrorFor(password, 'Senha não pode estar vazio!');
-    }else{
-        setSuccessFor(password);
-    }
-
-}
+    }}
 
 function setErrorFor(input, msg){
     const formControl = input.parentElement.parentElement;
@@ -45,6 +62,24 @@ function setErrorFor(input, msg){
     formControl.className = 'form-control error';
 }   
 
+function showToast(msg, color) {
+    Toastify({
+      text: msg,
+      duration: 3000, // Tempo de exibição em milissegundos
+      gravity: "bottom", // Posição do toast (top, bottom, ou middle)
+      position: "right", // Alinhamento horizontal (left, center, ou right)
+      backgroundColor: color ? color : "#d42828",
+      style: {
+        width: "auto",
+        height: "60px",
+        textAlign: "center",
+        alignContent: "center",
+        fontSize: "23px",
+        paddingInline: "30px",
+      },
+    }).showToast();
+}
+
 function setSuccessFor(input){
     const formControl = input.parentElement.parentElement;
 
@@ -54,5 +89,15 @@ function setSuccessFor(input){
     }
     
     formControl.className = 'form-control success';
-    window.location = 'minha-conta.html';
+
+    const getUserData = fakeAuthData.find((data) => data.email === emailUser.value && data.senha === password.value)
+
+    if(getUserData && getUserData.token){
+        localStorage.setItem("userToken", getUserData.token)
+        window.location = "minha-conta.html"
+    } else {
+        showToast("Dados inválidos.", "#d42828")
+    }
+
+
 }
