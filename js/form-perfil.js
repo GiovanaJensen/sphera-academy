@@ -54,25 +54,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function checkInputs() {
-    const nomeValue = nome.value.trim();
-    const emailValue = email.value.trim();
     const cidadeValue = cidade.value.trim();
     const estadoValue = estado.value.trim();
     const objetivoValue = objetivo.value.trim();
     const inglesValue = ingles.value.trim();
     const ondeValue = ondeGostaria.value.trim();
-
-    if (nomeValue === "") {
-      setErrorFor(nome, "Nome não pode ser nulo!");
-    } else {
-      setSuccessFor(nome);
-    }
-
-    if (emailValue === "") {
-      setErrorFor(email, "Email não pode ser nulo!");
-    } else {
-      setSuccessFor(email);
-    }
 
     if (cidadeValue === "") {
       setErrorFor(cidade, "É necessário informar o nome de sua cidade!");
@@ -105,8 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const isValid =
-      nomeValue !== "" &&
-      emailValue !== "" &&
       cidadeValue !== "" &&
       estadoValue !== "" &&
       objetivoValue !== "" &&
