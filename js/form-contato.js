@@ -33,6 +33,16 @@ function checkInputs(){
       setSuccessFor(mensagem);
     }
 
+    const isValid =
+    emailUserValue !== "" &&
+    assuntoValue !== "" &&
+    mensagemValue !== "";
+
+    if (isValid) {
+      window.location = "jornadas.html";
+    } else {
+        console.log("ainda não")
+    }
 }
 
 function setErrorFor(input, msg){
@@ -52,78 +62,9 @@ function setErrorFor(input, msg){
 
 function setSuccessFor(input){
     const formControl = input.parentElement.parentElement;
-    const small = formControl.querySelector('small');
-    formControl.removeChild(small);
-    formControl.className = 'form-control success';
-    window.location = 'minha-conta.html';
-}
-
-
-/*
-class enviarForm {
-    constructor(settings) {
-      this.settings = settings;
-      this.form = document.querySelector(settings.form);
-      this.formButton = document.querySelector(settings.button);
-      if (this.form) {
-        this.url = this.form.getAttribute("action");
-      }
-      this.sendForm = this.sendForm.bind(this);
-    }
-  
-    displaySuccess() {
-      this.form.innerHTML = this.settings.success;
-    }
-  
-    displayError() {
-      this.form.innerHTML = this.settings.error;
-    }
-  
-    getFormObject() {
-      const formObject = {};
-      const fields = this.form.querySelectorAll("[name]");
-      fields.forEach((field) => {
-        formObject[field.getAttribute("name")] = field.value;
-      });
-      return formObject;
-    }
-  
-    onSubmission(event) {
-      event.preventDefault();
-      event.target.disabled = true;
-      event.target.innerText = "Enviando...";
-    }
-  
-    async sendForm(event) {
-      try {
-        this.onSubmission(event);
-        await fetch(this.url, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify(this.getFormObject()),
-        });
-        this.displaySuccess();
-      } catch (error) {
-        this.displayError();
-        throw new Error(error);
-      }
-    }
-  
-    init() {
-      if (this.form) this.formButton.addEventListener("click", this.sendForm);
-      return this;
-    }
+    if(formControl.querySelector('small')){
+      const small = formControl.querySelector('small');
+      formControl.removeChild(small);
   }
-  
-  const enviar = new enviarForm({
-    form: "[data-form]",
-    button: "[data-button]",
-    success: "<p class='success'>Mensagem enviada!</p>",
-    error: "<p class='error'>Não foi possível enviar sua mensagem.</p>",
-  });
-  enviar.init();
-
-*/
+    formControl.className = 'form-control success';
+}
