@@ -9,13 +9,17 @@
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/menu-lateral.css" />
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="js/menu-lateral.js" defer></script>
+    <script src="js/form-perfil.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
   </head>
   <body>
     <aside class="menu">
@@ -29,16 +33,16 @@
         <h1>Complete o seu perfil</h1>
         <hr />
 
-        <form>
+        <form id="formPerfil">
           <div class="formularioCampos">
             <div class="campo-formulario">
               <label for="nome">Nome completo<i class="asterisco">*</i></label>
-              <input class="input--base" type="text" name="nome" id="nome" />
+              <input class="input--base__noicon" type="text" name="nome" id="nome" />
             </div>
             <div class="campo-formulario">
               <label for="escola">Escolha atual (Se estiver estudando)</label>
               <input
-                class="input--base"
+                class="input--base__noicon"
                 type="text"
                 name="escola"
                 id="escola"
@@ -48,7 +52,7 @@
               <label for="email"
                 >Endereço de e-mail<i class="asterisco">*</i></label
               >
-              <input class="input--base" type="text" name="email" id="email" />
+              <input class="input--base__noicon" type="text" name="email" id="email" />
             </div>
             <div class="campo-formulario">
               <!-- CAMPO SELECT -->
@@ -58,19 +62,39 @@
                 ></label
               >
               <input
-                class="input--base"
+                class="input--base__noicon"
                 type="text"
                 name="objetivo"
                 id="objetivo"
               />
             </div>
             <div class="campo-formulario">
-              <label for="cidade">Cidade*<i class="asterisco">*</i></label>
+              <label for="cep">CEP<i class="asterisco">*</i></label>
               <input
-                class="input--base"
+                class="input--base__noicon"
+                type="text"
+                name="cep"
+                id="cep"
+                maxlength="8"
+              />
+            </div>
+            <div class="campo-formulario">
+              <label for="cidade">Cidade<i class="asterisco">*</i></label>
+              <input
+                class="input--base__noicon"
                 type="text"
                 name="cidade"
                 id="cidade"
+              />
+            </div>
+            
+            <div class="campo-formulario">
+              <label for="estado">Estado<i class="asterisco">*</i></label>
+              <input
+                class="input--base__noicon"
+                type="text"
+                name="estado"
+                id="estado"
               />
             </div>
             <div class="campo-formulario">
@@ -81,50 +105,43 @@
                 ></label
               >
               <input
-                class="input--base"
+                class="input--base__noicon"
                 type="text"
                 name="ingles"
                 id="ingles"
               />
             </div>
             <div class="campo-formulario">
-              <label for="estado">Estado<i class="asterisco">*</i></label>
-              <input
-                class="input--base"
-                type="text"
-                name="estado"
-                id="estado"
-              />
-            </div>
-            <div class="campo-formulario">
-              <!-- CAMPO SELECT -->
-              <label for="ondeGostaria"
-                >Escolha o país para realizar a experiência<i class="asterisco"
-                  >*</i
-                ></label
-              >
-              <input
-                class="input--base"
-                type="text"
-                name="ondeGostaria"
-                id="ondeGostaria"
-              />
-            </div>
-            <div class="campo-formulario">
-              <label for="cep"
-                >Escolha o país para realizar a experiência<i class="asterisco"
-                  >*</i
-                ></label
-              >
-              <input class="input--base" type="text" name="cep" id="cep" />
+              <label for="onde-gostaria">Escolha o país para realizar a experiência</label>
+              <input  class="input--base__noicon" type="text" name="onde-gostaria" id="onde-gostaria" autocomplete="false"/>
             </div>
           </div>
+          <p id="selecionegenero">Selecione o seu gênero</p>
+          <div class="radio-group">
+            <label class="radio-button">
+              <input type="radio" name="option" class="radio-input">
+              <span class="radio-dot"></span>
+              <span class="radio-label">Masculino</span>
+            </label>
           
+            <label class="radio-button">
+              <input type="radio" name="option" class="radio-input">
+              <span class="radio-dot"></span>
+              <span class="radio-label">Feminino</span>
+            </label>
+          
+            <label class="radio-button">
+              <input type="radio" name="option" class="radio-input">
+              <span class="radio-dot"></span>
+              <span class="radio-label">Outro</span>
+            </label>
+          </div>
+            <button class="btn--base btn--dark-acqua-green" style="margin-top: 2.3rem" type="submit">Salvar alterações</button>
         </form>
       </div>
       <div class="imagem"></div>
     </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <!-- <img class="ilustrativo--lateral" src="imgs/ilustrativo1.webp" alt="Foto ilustrativa de um homem navegando por meio de um notebook"/> -->
-    <script src="js/form-perfil.js"></script>
   </body>
 </html>

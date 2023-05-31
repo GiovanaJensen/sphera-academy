@@ -1,140 +1,156 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    display: flex;
+body {
+  display: flex;
 }
 
-main{
-    width: 80%;
-    height: 100vh;
+main {
+  width: 80%;
+  height: 100vh;
 }
 
 .asterisco {
-    color: var(--acqua-green);
+  color: var(--acqua-green);
 }
 
 /* Códigos inseridos pelo Arthur */
 
-body{
-    background-color: var(--dark-elegant);
+body {
+  background-color: var(--dark-elegant);
 }
 
 .container {
-    width: calc(100% - 350px);
-    margin: 2rem;
-    overflow: hidden;
-    display: flex;
-    gap: 1rem;
+  width: calc(100% - 350px);
+  margin: 2rem;
+  overflow: hidden;
+  display: flex;
+  gap: 1rem;
 }
 
 .container .formulario {
-    background-color: white;
-    width: 65%;
-    min-height: 100%;
-    border-radius: 12px;
-    background-color: #041725;
-    padding: 50px;
-    color: white;
+  background-color: white;
+  width: 65%;
+  min-height: 100%;
+  border-radius: 12px;
+  background-color: #041725;
+  padding: 50px;
+  color: white;
 }
 
-.container .formulario h1{
-    font-weight: 400;
+.container .formulario h1 {
+  font-weight: 400;
 }
 
-
-.container .formulario hr{
-    width: 70px;
-    border: 2px solid var(--dark-acqua-green);
-    margin-top: 20px;
-    margin-bottom: 40px;
+.container .formulario hr {
+  width: 70px;
+  border: 2px solid var(--dark-acqua-green);
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
-
 
 .container .imagem {
-    width: 35%;
-    min-height: 100%;
-    border-radius: 12px;
-    background-color: #041725;
-    background-image: url("../imgs/ilustrativo.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  width: 35%;
+  min-height: 100%;
+  border-radius: 12px;
+  background-color: #041725;
+  background-image: url("../imgs/ilustrativo.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-
 .formularioCampos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 40px;
-    justify-content: center;
-    align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+  justify-content: center;
+  align-items: center;
 }
 
 .formularioCampos > .campo-formulario {
-    flex: 1 1 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
-.campo-formulario:nth-child(2n) {
-    margin-right: 10px; /* Remove o espaçamento à direita das divs pares */
+#selecionegenero {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.radio-button {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.radio-input {
+  display: none;
+}
+
+.radio-dot {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--dark-acqua-green);
+  margin-right: 6px;
+}
+
+.radio-input:checked + .radio-dot {
+  background-color: var(--dark-acqua-green);
+  padding: 1px;
+}
+
+.radio-label {
+  font-size: 16px;
+}
+
+/* .radio-group {
+    display: flex;
   }
+  
 
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+  .radio-input:checked + .radio-label {
+    background-color: #000;
+  } */
 
 /* validações de formulário arthur */
 
-.form-control i{
-    visibility: hidden;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
+.form-control i {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
 }
 
-.success i.fa-check{
-    color: var(--acqua-green);
-    visibility: visible;
+.success i.fa-check {
+  color: var(--acqua-green);
+  visibility: visible;
 }
 
-.error i.fa-circle-exclamation{
-    color: var(--acqua-green);
-    visibility: visible;
+.error i.fa-circle-exclamation {
+  color: var(--acqua-green);
+  visibility: visible;
 }
 
-.error small{
-    visibility: visible;
+.error small {
+  visibility: visible;
 }
-
-

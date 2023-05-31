@@ -83,17 +83,23 @@ small {
   color: var(--gray);
 }
 
-.input--base::placeholder {
+.input--base__noicon {
+  width: 100%;
+  background-color: #132634;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.875rem;
+  padding-left: 1rem;
+  color: var(--gray);
+}
+
+.input--base::placeholder, .input--base__noicon::placeholder  {
   color: var(--gray);
   font-size: 1rem;
 }
 
-.input--base:focus {
+.input--base:focus, .input--base__noicon:focus {
   outline: 1px solid var(--dark-acqua-green);
 }
 
-/* Códigos inseridos pelo Arthur */
 
-.input--base--radio {
-  display: inline;
-}
